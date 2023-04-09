@@ -8,6 +8,10 @@ function routes(app: Express) {
   });
 
   app.post("/api/users", validate(createUserSchema), createUserHandler);
+
+  app.get("/api/users", (req, res) => {
+    res.send("Ariful islam");
+  });
 }
 
 export default routes;
